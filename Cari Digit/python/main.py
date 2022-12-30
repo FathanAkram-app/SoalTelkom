@@ -1,4 +1,4 @@
-// code by @haululazkiyaa
+# code by @haululazkiyaa
 
 hasil = "false"
 
