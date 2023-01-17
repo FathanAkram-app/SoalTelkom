@@ -3,14 +3,14 @@
 
 ## Dasar Pemrograman
 
-1. Sebagian besar syntax C sama dengan syntax go, sehingga program dalam bahasa Go bisa langsung diterjemahkan ke bahasa C.
+1. Sebagian besar _syntax_ C sama dengan _syntax_ go, sehingga program dalam bahasa Go bisa langsung diterjemahkan ke bahasa C.
 2. Walaupun bahasa Go mirip dengan C, bahasa Go masih berada di tingkatan lebih tinggi daripada bahasa Go.
 3. Tidak ada fungsi `println()` di bahasa C. Semua perintah output menggunakan `printf()`. Selain `printf()` untuk output khusus string ada juga `puts()` yang jarang dipakai.
 4. Untuk mengeluarkan spasi, printf() dapat membaca `"\n"` untuk baris baru dan `"\t"` untuk spasi tab.
-5. Dalam bahasa C tidak ada fitur pengambilan library eksternal dari internet (bahasanya kuno, mohon dimaklumi)
-6. Bahasa C juga memiliki fitur inline assembly, yaitu fitur pengkodean assembly langsung dalam satu source code (ga penting tapi ah sudahlah, siapa tau ada developer 10x yang belum tau dan pengen tau)
+5. Dalam bahasa C tidak ada fitur pengambilan _library_ eksternal dari internet (bahasanya kuno, mohon dimaklumi)
+6. Bahasa C juga memiliki fitur _inline assembly_ yaitu fitur pengkodean _assembly_ langsung dalam satu source code (ga penting tapi ah sudahlah, siapa tau ada _developer_ 10x yang belum tau dan pengen tau)
 
-Dalam bahasa ini penggunaan titik koma (;) penting karena compiler biasanya mengabaikan segala bentuk spasi. Maka dari itu kebanyakan orang menulis sebuah fungsi dengan penempatan baris baru untuk membentuk algoritma sebuah fungsi.
+Dalam bahasa ini penggunaan titik koma (;) penting karena _compiler_ biasanya mengabaikan segala bentuk spasi. Maka dari itu kebanyakan orang menulis sebuah fungsi dengan penempatan baris baru untuk membentuk algoritma sebuah fungsi.
 
 Contoh fungsi biasa:
 ```
@@ -29,18 +29,18 @@ int main()
 }
 ```
 
-## Pernyataan Balik (Return Statements)
+## Pernyataan Balik (_Return Statements_)
 
 1. Sebuah fungsi dalam bahasa C selalu disertai dengan tipe data nilai baliknya. Contoh:
 ```
-int bruh()
+int bruh(int c)
 {
     (...);
-    return 2;
+    return c;
 }
 ```
-2. Setiap fungsi utama `main()` selalu diakhiri dengan pernyataan balik `return 0` jika tidak ada kesalahan teknis atau error. Selain itu pernyataan balik boleh diisi dengan angka lain selain `0`. Jika tidak ada pernyataan balik maka compiler tertentu tidak mau mengompilasikan program.
-3. Fungsi yang tidak menggunakan pernyataan balik adalah tipe fungsi `void`. Biasanya tipe fungsi ini digunakan untuk fungsi-fungsi dengan tipe data yang tidak diolah seperti fungsi biasa. Contoh penggunaan fungsi void adalah sebuah fungsi yang isinya hanya sekumpulan perintah `printf()`.
+2. Setiap fungsi utama `int main()` selalu diakhiri dengan pernyataan balik `return 0;` jika tidak ada kesalahan teknis atau error. Selain itu pernyataan balik boleh diisi dengan angka lain selain `0`. Jika tidak ada pernyataan balik maka _compiler_ tertentu tidak akan mengompilasikan program.
+3. Fungsi yang tidak menggunakan pernyataan balik adalah tipe fungsi `void()`. Biasanya tipe fungsi ini digunakan untuk fungsi-fungsi dengan tipe data yang tidak diolah seperti fungsi biasa. Contoh penggunaan fungsi void adalah sebuah fungsi yang isinya hanya sekumpulan perintah `printf()`.
 
 ## Tipe Data C dan Perinci Formatnya
 
@@ -58,15 +58,46 @@ sering dipakai.
 
 `uint`      : `%u`
 
-`bool`      : -
+`bool`      : tidak ada
 
-## Library dasar C vs. Library dasar Go
+## _Compiler_ Bahasa C
+Berbeda dengan Go, _compiler_ dalam bahasa C sangat banyak. Penggunaan _compiler_ ini bergantung pada keperluan dan algoritma suatu program. Umumnya orang-orang menggunakan `gcc` karena penjelasan kesalahan pemrograman (_program error_) dan peringatan (_program warning_) yang interaktif. Beberapa orang yang mementingkan kecepatan kompilasi memilih untuk menggunakan `Clang` dari program LLVM, namun terkadang _compiler_ yang berbeda memberikan _output_ dan _tracing_ yang berbeda juga, maka untuk kebanyakan soal di sini disarankan menggunakan `gcc`.
 
-#### Perbandingan Library Dasar C dengan Library Dasar Go yang sering digunakan
+#### Sedikit Tentang GCC, WSL, dan pemasangannya
+GCC biasanya sudah terpasang sebagai program dasar dari sistem operasi Linux. Selain itu Windows memiliki program WSL (Windows Subsystem for Linux) yang merupakan sebuah sistem Linux di dalam sistem operasi Windows. Mulai dari versi Windows 11 WSL sudah terpasang sebagai bagian dari Windows. Berikut cara memasang distribusi Linux dalam WSL.
+1. Cari distribusi Linux yang dapat dipasang dengan perintah berikut:
+```
+wsl -l -o
+```
+2. Pilih dan pasang distribusi yang ingin dipasang dengan perintah berikut:
+```
+wsl --install [distribusi]
+```
+3. Tunggu sejenak. Jika sudah selesai maka akan ada perintah dari WSL untuk menambahkan _usename_ baru seperti ini.
+```
+Installing, this may take a few minutes...
+Please create a default UNIX user account. The username does not need to match your Windows username.
+For more information visit: https://aka.ms/wslusers
+Enter new UNIX username:
+```
+4. Ketikkan _username_ dan _password_ yang diinginkan.
+
+#### Kompilasi program
+Kompilasi program dengan GCC dapat dilakukan dengan perintah berikut:
+```
+gcc program.c -o nama-lain
+``` 
+Jika _file_ baru tidak dirinci dengan `-o nama-lain` maka GCC akan secara otomatis menggunakan nama `a.out` sebagai nama dari _file_ hasil kompilasi.
+
+## _Library_ dasar C vs. _Library_ dasar Go
+#### Perbandingan _Library_ Dasar C dengan _Library_ Dasar Go yang sering digunakan
 1. `"fmt"` dalam Go sama dengan `<stdio.h>` dalam bahasa C.
 2. `"math"` dalam Go sama dengan `<math.h>` dalam bahasa C.
-3. Dalam Go tipe data boolean akan langsung diurus oleh compiler, namun dalam bahasa C kita harus menambahkan library `<stdbool.h>`.
-4. Tipe data boolean dalam bahasa C dapat ditulis sebagai `true` dan `false` atau sebagai bentuk biner `1` dan `0`. Tipe data ini tidak dapat dijadikan input atau output suatu program namun dapat membantu pengolahan logika dalam pemrograman.
-5. Dalam perintah-perintah matematis tipe data yang digunakan dalam bahasa C adalah `double`
+3. Dalam Go tipe data _boolean_ akan langsung diurus oleh _compiler_, namun dalam bahasa C kita harus menambahkan _library_ `<stdbool.h>`.
+4. Tipe data _boolean_ dalam bahasa C dapat ditulis sebagai `true` dan `false` atau sebagai bentuk biner `1` dan `0`. Tipe data ini tidak dapat dijadikan input atau output suatu program namun dapat membantu pengolahan logika dalam pemrograman.
+5. Dalam perintah-perintah penghitungan matematis tipe data yang digunakan dalam bahasa C adalah `double`
 
-Contoh dari program yang sudah menggunakan library yang dijelaskan ada di file `contoh.c`.
+Contoh dari program yang sudah menggunakan _library_ yang dijelaskan ada di _file_ `contoh.c`.
+
+Selamat memprogram! (oh iya, kalau mau, kita sebenarnya terkadang bisa menerjemahkan bahasa Go ke bahasa C)
+

@@ -31,3 +31,4 @@ int main()
     }
     return 0;
 }
+// Hanya kode contoh dari @Shua24

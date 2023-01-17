@@ -23,3 +23,4 @@ int main()
     printf("%d\n", bfact);
     return 0;
 }
+// Kode dari @Shua24
