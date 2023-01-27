@@ -1,6 +1,6 @@
 # Pengantar Bahasa C
-
 **Dibuat karena terkadang bahasa Go bisa sepenuhnya diterjemahkan ke bahasa C**
+
 (ini buat yang belum tau aja, yang udah tau abaikan readme ini.)
 
 ## Dasar Pemrograman
