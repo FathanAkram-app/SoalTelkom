@@ -6,28 +6,21 @@
 int main()
 {
     int a, b;
-    bool boolchk, bool2;
+    bool boolchk;
     double exp1, exp2;
-
-    boolchk = (a < 10) && (b > 5);
-    bool2 = (a > 20) && (b > 20);
-
     printf("Masukkan angka : ");
-    scanf("%d %d", &a, &b);
-    
+    scanf("%d", &a);
+    scanf("%d", &b);
+    boolchk = (a == 10) && (b == 24);
     if (boolchk == true)
     {
-      printf("%d\n", a*b);
+      exp1 = pow(a,4);
+      exp2 = pow(b,4);
+      printf("%lf\n", exp1+exp2);
     }
     else
     {
       printf("%d\n", a+b);
-    }
-    if (bool2 == true)
-    {
-      exp1 = pow(a,2);
-      exp2 = pow(b,2);
-      printf("%lf\n", exp1+exp2);
     }
     return 0;
 }
