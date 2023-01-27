@@ -22,3 +22,4 @@ int main()
     return 0;
 }
 // kode dari @Shua24
+// kode terjemahan dari kode Go @fathanAkram-app
