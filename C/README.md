@@ -1,4 +1,5 @@
 # Pengantar Bahasa C
+
 **Dibuat karena terkadang bahasa Go bisa sepenuhnya diterjemahkan ke bahasa C**
 (ini buat yang belum tau aja, yang udah tau abaikan readme ini.)
 
@@ -95,6 +96,7 @@ sering dipakai.
 `bool`      : tidak ada
 
 #### Syntax _Array_
+
 **Sekalian karena bahasa C levelnya rendah xixi**
 Sebuah _array_ adalah sebuah variabel yang sama namun terdiri dari data yang berbeda. Setiap _array_ dalam bahasa Go dan C **harus** memiliki indeks kecuali _array_ tersebut sudah merupakan sebuah himpunan. Setiap himpunan dan _array_ dalam bahasa Go dan C indeksnya merupakan bilangan cacah sehingga indeksnya pasti dimulai dari 0.
 
