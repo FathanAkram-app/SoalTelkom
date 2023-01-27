@@ -96,8 +96,8 @@ sering dipakai.
 `bool`      : tidak ada
 
 #### Syntax _Array_
-
 **Sekalian karena bahasa C levelnya rendah xixi**
+
 Sebuah _array_ adalah sebuah variabel yang sama namun terdiri dari data yang berbeda. Setiap _array_ dalam bahasa Go dan C **harus** memiliki indeks kecuali _array_ tersebut sudah merupakan sebuah himpunan. Setiap himpunan dan _array_ dalam bahasa Go dan C indeksnya merupakan bilangan cacah sehingga indeksnya pasti dimulai dari 0.
 
 Dalam bahasa Go _array_ tidak terlalu banyak digunakan untuk penyelesaian soal-soal di sini karena suatu variabel dapat diakali dengan _loop_. Bahasa C adalah bahasa pemrograman level rendah sehingga setiap variabel **pasti** hanya memegang satu nilai sehingga harus ada _array_ untuk setiap variabel yang terdampak perintah _loop_, Berikut adalah perbedaan dari _array_ dalam bahasa Go dan C.
