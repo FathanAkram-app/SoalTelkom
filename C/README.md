@@ -156,6 +156,7 @@ wsl -l -o
 wsl --install [distribusi]
 ```
 Nama distribusi Linux yang diketik adalah nama yang ada di kolom `FRIENDLY NAME`.
+
 3. Tunggu sejenak. Jika sudah selesai maka akan ada perintah dari WSL untuk menambahkan _usename_ baru seperti ini.
 ```
 Installing, this may take a few minutes...
