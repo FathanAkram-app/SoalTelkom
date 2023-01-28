@@ -193,3 +193,4 @@ Karena tidak semua fungsi di bahasa Go sama seperti bahasa C maka tidak semua so
 3. Program Harga Golongan Gerbang Tol
 4. Program bilangan terkecil dan terbesar
 5. Program Dadu
+6. Program atlet panah
