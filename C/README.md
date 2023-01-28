@@ -66,7 +66,7 @@ a = (int)e;
 (...);
 ```
 
-#### Pernyataan Balik (_Return Statements_)
+#### Pernyataango array output Balik (_Return Statements_)
 1. Sebuah fungsi dalam bahasa C selalu disertai dengan tipe data nilai baliknya. Contoh:
 ```
 int bruh(int c)
@@ -127,7 +127,7 @@ atau
 [tipe variabel][[indeks]] = {[variabel1],[variabel2],...};
 ```
 Semisal ada sebuah variabel bernama `arr` dengan tipe `int` yang terdiri dari 8 nilai. Variabel tersebut sebagai berikut.
-```
+```go array output
 int arr[7];
 ```
 Semisal ada sebuah variabel himpunan bernama `arrnum` yang anggotanya terdiri dari 5 bilangan acak dari 1 hingga 12, maka variabelnya sebagai berikut:
@@ -186,3 +186,10 @@ Contoh dari program yang sudah menggunakan _library_ yang dijelaskan ada di _fil
 
 Selamat memprogram!
 
+## Penting untuk diketahui
+Karena tidak semua fungsi di bahasa Go sama seperti bahasa C maka tidak semua soal yang ada di repositori ini dapat diselesaikan dalam bahasa C kecuali dengan tingkatan pemrograman lebih lanjut dan rumit. Sejauh ini program yang tidak dapat diterjemahkan ke bahasa C adalah program berikut:
+1. Program Ganjil-Genap
+2. Program Gerbang Tol
+3. Program Harga Golongan Gerbang Tol
+4. Program bilangan terkecil dan terbesar
+5. Program Dadu
