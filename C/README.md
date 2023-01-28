@@ -194,3 +194,4 @@ Karena tidak semua fungsi di bahasa Go sama seperti bahasa C maka tidak semua so
 4. Program bilangan terkecil dan terbesar
 5. Program Dadu
 6. Program atlet panah
+7. Program Temperatur
