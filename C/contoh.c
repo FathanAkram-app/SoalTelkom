@@ -1,5 +1,3 @@
-// code by @shua24
-
 #include <stdio.h>
 #include <stdbool.h>
 #include <math.h>
@@ -11,8 +9,8 @@ int main()
     printf("Masukkan angka : ");
     scanf("%d", &a);
     scanf("%d", &b);
-    boolchk = (a == 10) && (b == 24);
-    if (boolchk == true)
+    boolchk = (a >= 10) && (b <= 24);
+    if (boolchk == 1)
     {
       exp1 = pow(a,4);
       exp2 = pow(b,4);
